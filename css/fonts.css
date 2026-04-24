@@ -1,0 +1,66 @@
+/*-----------
+    Fonts
+-----------*/
+@font-face
+{
+    font-family: 'Ubuntu';
+    font-weight: normal;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/Ubuntu-Regular.woff2') format('woff2'),
+    url('../fonts/Ubuntu-Regular.woff') format('woff'),
+    url('../fonts/Ubuntu-Regular.ttf') format('truetype');
+}
+
+
+@font-face
+{
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/Ubuntu-Medium.woff2') format('woff2'),
+    url('../fonts/Ubuntu-Medium.woff') format('woff'),
+    url('../fonts/Ubuntu-Medium.ttf') format('truetype');
+}
+
+
+@font-face
+{
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/Ubuntu-Bold.woff2') format('woff2'),
+    url('../fonts/Ubuntu-Bold.woff') format('woff'),
+    url('../fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+
+
+@font-face
+{
+    font-family: 'Coolvetica';
+    font-weight: 300;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/coolvetica-light.woff2') format('woff2'),
+    url('../fonts/coolvetica-light.woff') format('woff'),
+    url('../fonts/coolvetica-light.ttf') format('truetype');
+}
+
+
+@font-face
+{
+    font-family: 'Coolvetica';
+    font-weight: 700;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/CoolveticaRg-Bold.woff2') format('woff2'),
+    url('../fonts/CoolveticaRg-Bold.woff') format('woff'),
+    url('../fonts/CoolveticaRg-Bold.ttf') format('truetype');
+}

@@ -1,0 +1,130 @@
+.swiper-button-next,
+.swiper-button-prev
+{
+    border-radius: var(--border_radius_s);
+    background: var(--light_color);
+    box-shadow: 0 4px 35px 0 rgba(48, 121, 216, .40);
+
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-color: var(--primary_color);
+    --swiper-navigation-size: 40px;
+    --swiper-navigation-sides-offset: var(--inner_gap);
+
+
+    &:after
+    {
+        display: none;
+    }
+
+
+    .icon
+    {
+        display: block;
+
+        width: 14px;
+
+        aspect-ratio: 1 / 1;
+    }
+}
+
+
+.swiper-button-prev
+{
+    .icon
+    {
+        transform: scale(-1, 1);
+    }
+}
+
+
+
+.swiper-controls
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 10px;
+
+
+    .swiper-button-next,
+    .swiper-button-prev
+    {
+        position: relative;
+        inset: 0;
+
+        margin: 0;
+
+        transform: none;
+
+        --swiper-navigation-sides-offset: 0;
+        --swiper-navigation-top-offset: 0;
+    }
+}
+
+
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+{
+    margin: 0;
+}
+
+
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    height: 11px;
+
+    pointer-events: none;
+
+    gap: 11px;
+}
+
+
+.swiper-pagination-bullet
+{
+    display: block;
+
+    width: 11px;
+
+    transition: .2s linear;
+    pointer-events: auto;
+
+    opacity: 1;
+    border: 2px solid #0098ff;
+    border-radius: 50%;
+    background: #0098ff;
+
+    aspect-ratio: 1 / 1;
+}
+
+
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet.active
+{
+    border-color: #0098ff;
+    background: #fff;
+}
+
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+{
+    margin: 0;
+}
