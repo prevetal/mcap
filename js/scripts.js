@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			slideVisibleClass: 'visible',
 			lazy: true,
 			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev'
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev')
 			},
 			slidesPerView: 1,
 			spaceBetween: 0,
@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			slideVisibleClass: 'visible',
 			lazy: true,
 			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev'
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev')
 			},
 			breakpoints: {
 				0: {
@@ -118,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
 				}
 			},
 			on: {
-				init: swiper => setHeight(swiper.el.querySelectorAll('.review')),
 				resize: swiper => {
 					let items = swiper.el.querySelectorAll('.review')
 
@@ -144,13 +143,23 @@ document.addEventListener('DOMContentLoaded', function() {
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
-			spaceBetween: getCssVar(aboutInfoSlider, '--spaceBetween'),
 			slidesPerView: 1,
 			lazy: true,
 			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev'
-			}
+				nextEl: aboutInfoSlider.querySelector('.swiper-button-next'),
+				prevEl: aboutInfoSlider.querySelector('.swiper-button-prev')
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: getCssVar(aboutInfoSlider, '--spaceBetween-0'),
+				},
+				768: {
+					spaceBetween: getCssVar(aboutInfoSlider, '--spaceBetween-768'),
+				},
+				1280: {
+					spaceBetween: getCssVar(aboutInfoSlider, '--spaceBetween-1280'),
+				}
+			},
 		})
 	}
 
@@ -170,8 +179,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			slideVisibleClass: 'visible',
 			lazy: true,
 			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev'
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev')
 			},
 			slidesPerView: getCssVar(el, '--slidesPerView'),
 			breakpoints: {
@@ -216,14 +225,130 @@ document.addEventListener('DOMContentLoaded', function() {
 			slideVisibleClass: 'visible',
 			lazy: true,
 			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev'
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev')
 			},
 			slidesPerView: getCssVar(el, '--slidesPerView'),
 			spaceBetween: getCssVar(el, '--spaceBetween'),
 		}
 
 		serviceImagesSliders.push(new Swiper('.service_images_s' + i, options))
+	})
+
+
+	// Objects slider
+	const objectsSliders = [],
+		objectImagesSliders = [],
+		objects = document.querySelectorAll('.objects .swiper.main'),
+		objectImages = document.querySelectorAll('.objects .images .swiper')
+
+	objectImages.forEach((el, i) => {
+		el.classList.add('object_images_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			lazy: true,
+			nested: true,
+			navigation: {
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev')
+			},
+			slidesPerView: 1,
+			spaceBetween: 0,
+		}
+
+		objectImagesSliders.push(new Swiper('.object_images_s' + i, options))
+	})
+
+	objects.forEach((el, i) => {
+		el.classList.add('objects_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			lazy: true,
+			navigation: {
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev')
+			},
+			slidesPerView: getCssVar(el, '--slidesPerView'),
+			breakpoints: {
+				0: {
+					spaceBetween: getCssVar(el, '--spaceBetween-0'),
+				},
+				768: {
+					spaceBetween: getCssVar(el, '--spaceBetween-768'),
+				},
+				1280: {
+					spaceBetween: getCssVar(el, '--spaceBetween-1280'),
+				}
+			},
+			on: {
+				init: swiper => setHeight(swiper.el.querySelectorAll('.object')),
+				resize: swiper => {
+					let items = swiper.el.querySelectorAll('.object')
+
+					items.forEach(el => el.style.height = 'auto')
+
+					setHeight(items)
+				}
+			}
+		}
+
+		objectsSliders.push(new Swiper('.objects_s' + i, options))
+	})
+
+
+	// Logos carousel slider
+	const logosCarouselSliders = [],
+		logosCarousel = document.querySelectorAll('.logos .swiper')
+
+	logosCarousel.forEach((el, i) => {
+		el.classList.add('logos_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 6000,
+			centeredSlides: true,
+			autoplay: {
+				delay: 1,
+				disableOnInteraction: true,
+			},
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			allowTouchMove: false,
+			lazy: true,
+			slidesPerView: getCssVar(el, '--slidesPerView'),
+			spaceBetween: getCssVar(el, '--spaceBetween'),
+		}
+
+		logosCarouselSliders.push(new Swiper('.logos_s' + i, options))
+	})
+
+
+	// Accordion
+	$('body').on('click', '.accordion .accordion_item .head', function(e) {
+		e.preventDefault()
+
+		let item = $(this).closest('.accordion_item'),
+			accordion = $(this).closest('.accordion')
+
+		if (item.hasClass('active')) {
+			item.removeClass('active').find('.data').slideUp(300)
+		} else {
+			accordion.find('.accordion_item').removeClass('active')
+			accordion.find('.data').slideUp(300)
+
+			item.addClass('active').find('.data').slideDown(300)
+		}
 	})
 
 
@@ -237,14 +362,17 @@ document.addEventListener('DOMContentLoaded', function() {
 			PREV: 'Предыдущий',
 			MODAL: 'Вы можете закрыть это модальное окно нажав клавишу ESC'
 		},
-		tpl: {
-			closeButton: '<button data-fancybox-close class="f-button is-close-btn" title="{{CLOSE}}"><svg><use xlink:href="images/sprite.svg#ic_close"></use></svg></button>',
+		on: {
+			ready: (fancybox) => {
+				const container = fancybox.getContainer()
 
-			main: `<div class="fancybox__container" role="dialog" aria-modal="true" aria-label="{{MODAL}}" tabindex="-1">
-				<div class="fancybox__backdrop"></div>
-				<div class="fancybox__carousel"></div>
-				<div class="fancybox__footer"></div>
-			</div>`,
+				const btn = container.querySelector('.is-close-button')
+
+				if (btn) {
+					btn.classList.add('is-close-btn')
+					btn.innerHTML = '<svg><use xlink:href="images/sprite.svg#ic_close"></use></svg>'
+				}
+			},
 		}
 	}
 
@@ -265,13 +393,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
-	$('.modal .close_btn').click(function(e) {
-		e.preventDefault()
-
-		Fancybox.close()
-	})
-
-
 	// Zoom images
 	Fancybox.bind('.fancy_img', {
 		...fancyOptions,
@@ -285,16 +406,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	// Mob. menu
-	$('.mob_header .mob_menu_btn').click((e) => {
+	$('.mob_header .mob_menu_btn, .mob_menu .close_btn').click((e) => {
 		e.preventDefault()
 
 		$('.mob_header .mob_menu_btn').toggleClass('active')
 		$('body').toggleClass('lock')
-		$('header').toggleClass('show')
+		$('.mob_menu').toggleClass('show')
 
 		$('.mob_header .mob_menu_btn').hasClass('active')
 			? $('.overlay').fadeIn(300)
 			: $('.overlay').fadeOut(200)
+	})
+
+
+	$('.mob_menu .menu .item a.sub_link').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+		$(this).next('.sub').slideToggle(300)
 	})
 
 
@@ -307,30 +436,6 @@ document.addEventListener('DOMContentLoaded', function() {
 				mask: '+{7} (000) 000-00-00',
 				lazy: true
 			})
-		})
-	}
-
-
-	// Focus when clicking on the field name
-	const formLabels = document.querySelectorAll('form .label')
-
-	if (formLabels) {
-		formLabels.forEach(el => {
-			el.addEventListener('click', e => {
-				e.preventDefault()
-
-				el.closest('.line').querySelector('.input, textarea').focus()
-			})
-		})
-	}
-
-
-	// Select file
-	const fileInputs = document.querySelectorAll('form input[type=file]')
-
-	if (fileInputs) {
-		fileInputs.forEach(el => {
-			el.addEventListener('change', () => el.closest('.file').querySelector('label span').innerText = el.value)
 		})
 	}
 
@@ -372,6 +477,128 @@ document.addEventListener('DOMContentLoaded', function() {
 		$(this).toggleClass('active')
 		parent.find('.data').toggleClass('show')
 	})
+
+
+	// Form area — minus/plus
+	$('body').on('click', '.form .area .btn', function (e) {
+		e.preventDefault()
+
+		const $input = $(this).closest('.area').find('.input'),
+			current = parseFloat($input.val()),
+			minimum = parseFloat($input.data('minimum')),
+			maximum = parseFloat($input.data('maximum')),
+			step = parseFloat($input.data('step')),
+			unit = $input.data('unit') || '',
+			direction = $(this).hasClass('minus') ? -1 : 1
+
+		if (isNaN(current)) {
+			$input.val(minimum + unit)
+			return
+		}
+
+		$input.val(Math.min(Math.max(current + direction * step, minimum), maximum) + unit)
+	})
+
+	$('body').on('keydown', '.form .area .input', function () {
+		const $input = $(this),
+			minimum = parseFloat($input.data('minimum')),
+			maximum = parseFloat($input.data('maximum'))
+
+		setTimeout(() => {
+			const val = parseFloat($input.val())
+			$input.val(Math.min(Math.max(isNaN(val) ? minimum : val, minimum), maximum))
+		})
+	})
+
+
+	// Custom submit
+	$('.form').submit(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
+
+		Fancybox.show(
+			[{
+				src: '#success_modal',
+				type: 'inline'
+			}],
+			fancyOptions
+		)
+	})
+
+
+	// Quiz
+	var quizCurrentStep = 1,
+		quizTotalSteps = 7
+
+
+	let progress = 100 / quizTotalSteps * quizCurrentStep
+	$('.quiz .progress div').css('width', progress + '%')
+
+	$('.quiz .count .total').text(quizTotalSteps)
+
+
+	$('.quiz .btns .next_btn').click(function(e) {
+		e.preventDefault()
+
+		quizCurrentStep++
+
+		$('.quiz .step').hide()
+		$('.quiz .step' + quizCurrentStep).fadeIn(300)
+
+		$('.quiz .count .current').text(quizCurrentStep)
+
+		let progress = 100 / quizTotalSteps * quizCurrentStep
+		$('.quiz .progress div').css('width', progress + '%')
+
+		if (quizCurrentStep > 1) {
+			$('.quiz .btns .prev_btn').addClass('show')
+		}
+
+		if (quizCurrentStep === 7) {
+			$('.quiz .btns .next_btn').removeClass('show')
+			$('.quiz .btns .send_btn').addClass('show')
+		}
+	})
+
+
+	$('.quiz .btns .prev_btn').click(function(e) {
+		e.preventDefault()
+
+		quizCurrentStep = quizCurrentStep - 1
+
+		$('.quiz .step').hide()
+		$('.quiz .step' + quizCurrentStep).fadeIn(300)
+
+		$('.quiz .count .current').text(quizCurrentStep)
+
+		let progress = 100 / quizTotalSteps * quizCurrentStep
+		$('.quiz .progress div').css('width', progress + '%')
+
+		if (quizCurrentStep === 1) {
+			$('.quiz .btns .prev_btn').removeClass('show')
+		}
+
+		if (quizCurrentStep !== 7) {
+			$('.quiz .btns .send_btn').removeClass('show')
+			$('.quiz .btns .next_btn').addClass('show')
+		}
+	})
+
+
+	$('.quiz .btns .send_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.quiz .success').addClass('show')
+	})
+
+
+	$('.quiz .step1 .other .btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).hide()
+		$('.quiz .step1 .other .input').focus()
+	})
 })
 
 
@@ -397,7 +624,7 @@ window.addEventListener('resize', function () {
 		if (!fakeResize2) {
 			fakeResize2 = true
 
-			if (windowW < 375) document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
+			if (windowW < 390) document.getElementsByTagName('meta')['viewport'].content = 'width=390, user-scalable=no'
 		} else {
 			fakeResize = false
 			fakeResize2 = true

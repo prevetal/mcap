@@ -373,387 +373,342 @@
 				</section>
 
 
-				<section class="page_head s_m">
+				<section class="prices">
 					<div class="cont s_w">
-						<div class="breadcrumbs">
-							<a href="/">Главная страница</a>
+						<div class="row">
+							<div class="data">
+								<div class="breadcrumbs">
+									<a href="/">Главная страница</a>
 
-							<span class="sep">/</span>
+									<span class="sep">/</span>
 
-							<span class="current">Блог</span>
-						</div>
+									<span class="current">Цены</span>
+								</div>
 
-						<h1 class="page_title text_gradient">Наш блог</h1>
+								<h1 class="title text_gradient">Рассчитать стоимость</h1>
 
-						<div class="page_desc text_block">
-							<p>Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</p>
+								<div class="sub_title"><b>Ответьте на 7 вопросов,</b> чтобы мы смогли вам посчитать стоимость</div>
+
+								<div class="desc text_block">
+									<p>Небольшой короткий текст, призывающий заполнить квиз. Буквально в 3-4 строки, небольшой текст. Небольшой короткий текст, призывающий заполнить квиз. Буквально в 3-4 строки, небольшой текст.</p>
+								</div>
+							</div>
+
+							<form class="form quiz" action="">
+								<div class="progress">
+									<div style="width: 0%;"></div>
+								</div>
+
+								<div class="count"><span class="primary">Вопрос</span> <span class="current primary">1</span> из <span class="total">1</span></div>
+
+								<div class="step step1" style="display: block;">
+									<div class="question text_gradient">Какое помещение планируете ремонтировать?</div>
+
+									<div class="options">
+										<div class="grid_row">
+											<label>
+												<input type="radio" name="step1_answer">
+
+												<span>Офис</span>
+
+												<picture class="thumb">
+													<img src="images/tmp/quiz_step1_answer_thumb1.jpg" alt="" loading="lazy" class="cover">
+												</picture>
+											</label>
+
+											<label>
+												<input type="radio" name="step1_answer">
+
+												<span>Магазин</span>
+
+												<picture class="thumb">
+													<img src="images/tmp/quiz_step1_answer_thumb2.jpg" alt="" loading="lazy" class="cover">
+												</picture>
+											</label>
+
+											<label>
+												<input type="radio" name="step1_answer">
+
+												<span>Кафе / ресторан</span>
+
+												<picture class="thumb">
+													<img src="images/tmp/quiz_step1_answer_thumb3.jpg" alt="" loading="lazy" class="cover">
+												</picture>
+											</label>
+
+											<label>
+												<input type="radio" name="step1_answer">
+
+												<span>Склад / производство</span>
+
+												<picture class="thumb">
+													<img src="images/tmp/quiz_step1_answer_thumb4.jpg" alt="" loading="lazy" class="cover">
+												</picture>
+											</label>
+
+											<div class="other">
+												<button class="btn">
+													<span>Другое</span>
+
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_edit"></use></svg>
+												</button>
+
+												<div class="field">
+													<input type="text" name="" value="" class="input">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="step step2">
+									<div class="question text_gradient">Укажите площадь</div>
+
+									<div class="area">
+										<div class="field">
+											<button type="button" class="btn minus">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+											</button>
+
+											<input type="text" value="45 м2" class="input" data-minimum="1" data-maximum="9999" data-step="1" data-unit=" м2" placeholder="Площадь">
+
+											<button type="button" class="btn plus">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="step step3">
+									<div class="question text_gradient">Какой ремонт вам нужен?</div>
+
+									<div class="options">
+										<label>
+											<input type="radio" name="step3_answer" checked>
+
+											<div class="check">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+											</div>
+
+											<div>
+												<div class="name">Косметический</div>
+
+												<div class="desc">Обновление без перепланировки</div>
+											</div>
+										</label>
+
+										<label>
+											<input type="radio" name="step3_answer">
+
+											<div class="check">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+											</div>
+
+											<div>
+												<div class="name">Капитальный</div>
+
+												<div class="desc">C заменой коммуникаций</div>
+											</div>
+										</label>
+
+										<label>
+											<input type="radio" name="step3_answer">
+
+											<div class="check">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+											</div>
+
+											<div>
+												<div class="name">Под ключ</div>
+
+												<div class="desc">Дизайн + ремонт + комплектация</div>
+											</div>
+										</label>
+									</div>
+								</div>
+
+								<div class="step step4">
+									<div class="question text_gradient">В каком состоянии объект?</div>
+
+									<div class="options">
+										<label>
+											<input type="radio" name="step4_answer" checked>
+
+											<div class="check">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+											</div>
+
+											<div>
+												<div class="name">Новостройка</div>
+
+												<div class="desc">Без отделки</div>
+											</div>
+										</label>
+
+										<label>
+											<input type="radio" name="step4_answer">
+
+											<div class="check">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+											</div>
+
+											<div>
+												<div class="name">Требуется демонтаж</div>
+											</div>
+										</label>
+
+										<label>
+											<input type="radio" name="step4_answer">
+
+											<div class="check">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+											</div>
+
+											<div>
+												<div class="name">Уже есть ремонт</div>
+
+												<div class="desc">Нужно обновить</div>
+											</div>
+										</label>
+									</div>
+								</div>
+
+								<div class="step step5">
+									<div class="question text_gradient">Что ещё потребуется?</div>
+
+									<div class="options">
+										<div class="grid_row">
+											<label>
+												<input type="checkbox" name="step5_answer">
+
+												<div><span>Дизайн-проект</span></div>
+											</label>
+
+											<label>
+												<input type="checkbox" name="step5_answer">
+
+												<div><span>Демонтаж</span></div>
+											</label>
+
+											<label>
+												<input type="checkbox" name="step5_answer">
+
+												<div><span>Электрика<br >под ключ</span></div>
+											</label>
+
+											<label>
+												<input type="checkbox" name="step5_answer">
+
+												<div><span>Сантехника</span></div>
+											</label>
+
+											<label>
+												<input type="checkbox" name="step5_answer">
+
+												<div><span>Вентиляция / кондиционирование</span></div>
+											</label>
+
+											<label>
+												<input type="checkbox" name="step5_answer">
+
+												<div><span>Мебель /<br> оснащение</span></div>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="step step6">
+									<div class="question text_gradient">Когда нужно завершить ремонт?</div>
+
+									<div class="options">
+										<label>
+											<input type="radio" name="step6_answer" checked>
+
+											<div class="check">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+											</div>
+
+											<div>
+												<div class="name">Срочно</div>
+
+												<div class="desc">До 20 дней</div>
+											</div>
+										</label>
+
+										<label>
+											<input type="radio" name="step6_answer">
+
+											<div class="check">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+											</div>
+
+											<div>
+												<div class="name">В течение 1-3 месяцев</div>
+											</div>
+										</label>
+
+										<label>
+											<input type="radio" name="step6_answer">
+
+											<div class="check">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+											</div>
+
+											<div>
+												<div class="name">Без спешки</div>
+											</div>
+										</label>
+									</div>
+								</div>
+
+								<div class="step step7">
+									<div class="question text_gradient">Куда отправить расчет?</div>
+
+									<div class="text">Спасибо, всю информацию зафиксировали и уже начали делать просчет ремонта именно вашего помещения. Заполните контактные данные, и мы отправим файл вам</div>
+
+									<div class="line">
+										<div class="field">
+											<input type="text" name="" value="" class="input" placeholder="Ваше имя">
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="field">
+											<input type="text" name="" value="" class="input" placeholder="Телефон / Max / Telegram">
+										</div>
+									</div>
+								</div>
+
+								<div class="success">
+									<div class="icon">
+										<svg><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+									</div>
+
+									<div class="title text_gradient">Готово!</div>
+
+									<div class="desc">В течение дня отправим просчет</div>
+								</div>
+
+								<div class="btns">
+									<button type="button" class="btn prev_btn">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+									</button>
+
+									<button type="button" class="btn next_btn show">
+										<span>Следующий шаг</span>
+
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+									</button>
+
+									<button type="button" class="btn send_btn">
+										<span>Отправить расчет</span>
+
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+									</button>
+								</div>
+							</form>
 						</div>
 					</div>
-				</section>
-
-
-				<section class="articles block">
-					<div class="cont s_w">
-						<div class="grid_row">
-							<div class="article">
-								<a href="/" class="image">
-									<picture class="thumb">
-										<img src="images/tmp/article_thumb.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</a>
-
-								<div class="info">
-									<div class="name">
-										<a href="/" class="text_gradient">Название статьи<br> в 1-2 строки максимум</a>
-									</div>
-
-									<div class="desc">Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</div>
-
-									<div class="date">15 апреля 2025</div>
-
-									<div class="link">
-										<a href="/">
-											<span>Читать статью</span>
-
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-										</a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article">
-								<a href="/" class="image">
-									<picture class="thumb">
-										<img src="images/tmp/article_thumb.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</a>
-
-								<div class="info">
-									<div class="name">
-										<a href="/" class="text_gradient">Название статьи<br> в 1-2 строки максимум</a>
-									</div>
-
-									<div class="desc">Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</div>
-
-									<div class="date">15 апреля 2025</div>
-
-									<div class="link">
-										<a href="/">
-											<span>Читать статью</span>
-
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-										</a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article">
-								<a href="/" class="image">
-									<picture class="thumb">
-										<img src="images/tmp/article_thumb.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</a>
-
-								<div class="info">
-									<div class="name">
-										<a href="/" class="text_gradient">Название статьи<br> в 1-2 строки максимум</a>
-									</div>
-
-									<div class="desc">Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</div>
-
-									<div class="date">15 апреля 2025</div>
-
-									<div class="link">
-										<a href="/">
-											<span>Читать статью</span>
-
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-										</a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article">
-								<a href="/" class="image">
-									<picture class="thumb">
-										<img src="images/tmp/article_thumb.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</a>
-
-								<div class="info">
-									<div class="name">
-										<a href="/" class="text_gradient">Название статьи<br> в 1-2 строки максимум</a>
-									</div>
-
-									<div class="desc">Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</div>
-
-									<div class="date">15 апреля 2025</div>
-
-									<div class="link">
-										<a href="/">
-											<span>Читать статью</span>
-
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-										</a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article">
-								<a href="/" class="image">
-									<picture class="thumb">
-										<img src="images/tmp/article_thumb.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</a>
-
-								<div class="info">
-									<div class="name">
-										<a href="/" class="text_gradient">Название статьи<br> в 1-2 строки максимум</a>
-									</div>
-
-									<div class="desc">Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</div>
-
-									<div class="date">15 апреля 2025</div>
-
-									<div class="link">
-										<a href="/">
-											<span>Читать статью</span>
-
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-										</a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article">
-								<a href="/" class="image">
-									<picture class="thumb">
-										<img src="images/tmp/article_thumb.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</a>
-
-								<div class="info">
-									<div class="name">
-										<a href="/" class="text_gradient">Название статьи<br> в 1-2 строки максимум</a>
-									</div>
-
-									<div class="desc">Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</div>
-
-									<div class="date">15 апреля 2025</div>
-
-									<div class="link">
-										<a href="/">
-											<span>Читать статью</span>
-
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-										</a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article">
-								<a href="/" class="image">
-									<picture class="thumb">
-										<img src="images/tmp/article_thumb.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</a>
-
-								<div class="info">
-									<div class="name">
-										<a href="/" class="text_gradient">Название статьи<br> в 1-2 строки максимум</a>
-									</div>
-
-									<div class="desc">Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</div>
-
-									<div class="date">15 апреля 2025</div>
-
-									<div class="link">
-										<a href="/">
-											<span>Читать статью</span>
-
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-										</a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article">
-								<a href="/" class="image">
-									<picture class="thumb">
-										<img src="images/tmp/article_thumb.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</a>
-
-								<div class="info">
-									<div class="name">
-										<a href="/" class="text_gradient">Название статьи<br> в 1-2 строки максимум</a>
-									</div>
-
-									<div class="desc">Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</div>
-
-									<div class="date">15 апреля 2025</div>
-
-									<div class="link">
-										<a href="/">
-											<span>Читать статью</span>
-
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-										</a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article">
-								<a href="/" class="image">
-									<picture class="thumb">
-										<img src="images/tmp/article_thumb.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</a>
-
-								<div class="info">
-									<div class="name">
-										<a href="/" class="text_gradient">Название статьи<br> в 1-2 строки максимум</a>
-									</div>
-
-									<div class="desc">Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</div>
-
-									<div class="date">15 апреля 2025</div>
-
-									<div class="link">
-										<a href="/">
-											<span>Читать статью</span>
-
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="pagination">
-							<a href="/" class="prev">
-								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-
-								<span>Предыдущая<span class="mob_hide"> страница</span></span>
-							</a>
-
-							<a class="active">1</a>
-
-							<a href="/">2</a>
-
-							<a href="/">3</a>
-
-							<a href="/" class="mob_hide">4</a>
-
-							<div class="sep">...</div>
-
-							<a href="/">13</a>
-
-							<a href="/" class="next">
-								<span>Следующая<span class="mob_hide"> страница</span></span>
-
-								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
-							</a>
-						</div>
-					</div>
-				</section>
-
-
-				<section class="seo_block block">
-					<div class="cont s_w">
-						<div class="block_head">
-							<div class="title small text_gradient">SEO-заголовок</div>
-						</div>
-
-						<div class="text_block">
-							<div class="grid_row">
-								<div class="col">
-									<p>Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</p>
-
-									<p>Сопровождаем возведение сооружений, начиная с момента возникновения идеи – заканчивая сдачей в эксплуатацию.</p>
-
-									<p>Без нервов. Без волокиты. Работа будет выполнена в соответствии с запросами застройщика, включая неучтенные и возникшие при исполнении дополнительные задачи, благодаря наличию в штате опытных юристов и инженеров.</p>
-
-									<p><b>В одном месте – и проектировщик, и технический заказчик.</b></p>
-
-									<p>Сотрудников ООО “Смартхаус” отличает серьезное и сознательное отношение к делу (опыт работы отдельных кадров – с 2000 года). Наш подход – комплексное управление строительными планами действий.</p>
-								</div>
-
-								<div class="col">
-									<p>Специализация компании “Смартхаус”– получение разрешений на строительство коммерческих предприятий.</p>
-
-									<p>Сопровождаем возведение сооружений, начиная с момента возникновения идеи – заканчивая сдачей в эксплуатацию.</p>
-
-									<p>Без нервов. Без волокиты. Работа будет выполнена в соответствии с запросами застройщика, включая неучтенные и возникшие при исполнении дополнительные задачи, благодаря наличию в штате опытных юристов и инженеров.</p>
-
-									<p><b>В одном месте – и проектировщик, и технический заказчик.</b></p>
-
-									<p>Сотрудников ООО “Смартхаус” отличает серьезное и сознательное отношение к делу (опыт работы отдельных кадров – с 2000 года). Наш подход – комплексное управление строительными планами действий.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-
-				<section class="contacts_block">
-					<div class="cont">
-						<div class="block_head">
-							<div class="title text_gradient">Наши контакты</div>
-
-							<div class="desc text_block">
-								<p>Небольшой короткий текст, призывающий связаться с нами по контактам ниже. Буквально в 2 строки, небольшой текст</p>
-							</div>
-						</div>
-
-						<div class="data">
-							<div class="grid_row">
-								<div class="item">
-									<div class="label">Номер телефона:</div>
-
-									<div class="val">
-										<div><a href="tel:+7 995 909 85 85">+7 995 909 85 85</a></div>
-									</div>
-								</div>
-
-								<div class="item">
-									<div class="label">E-mail</div>
-
-									<div class="val">
-										<div><a href="mailto:info@company-mcap.ru">info@company-mcap.ru</a></div>
-									</div>
-								</div>
-
-								<div class="item messengers">
-									<div class="label">Мессенджеры:</div>
-
-									<div class="val">
-										<div><a href="/" class="tg_link" rel="noopener nofollow">Telegram</a></div>
-
-										<div><a href="/" class="max_link" rel="noopener nofollow">Max</a></div>
-									</div>
-								</div>
-
-								<div class="item">
-									<div class="label">Адрес офиса:</div>
-
-									<div class="val">
-										<div>Москва, ул. 2-я Синичкина, д. 9а стр.</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="requisites">Компания ООО «Смартхаус»,<br> ОГРН 1167746266490,<br> ИНН 7716819964</div>
-					</div>
-
-					<picture class="image">
-						<img src="images/contacts_block_image.png" alt="" loading="lazy">
-					</picture>
-
-					<picture class="bg">
-						<img src="images/bg_contacts_block.png" alt="" loading="lazy">
-					</picture>
 				</section>
 			</div>
 
@@ -837,6 +792,11 @@
 
 
 			<div class="overlay"></div>
+
+
+			<picture class="global_bg mob_hide">
+				<img src="images/bg_prices.jpg" alt="" fetchpriority="high">
+			</picture>
 		</div>
 
 

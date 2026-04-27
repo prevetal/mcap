@@ -4,62 +4,715 @@
     /*-------------------
         Global styles
     -------------------*/
+    .swiper-controls
+    {
+        display: none;
+    }
+
+
+
+    /*---------------
+        Global bg
+    ---------------*/
+    .global_bg
+    {
+        margin-right: -1000px;
+
+
+        &.bottom
+        {
+            bottom: 200px;
+
+            min-width: 2100px;
+        }
+
+
+        &.mob_hide
+        {
+            display: none;
+        }
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item
+    {
+        .head
+        {
+            padding-block: var(--inner_gap);
+            padding-inline: var(--inner_gap);
+
+
+            .title
+            {
+                font-size: 25px;
+            }
+        }
+
+
+        .data
+        {
+            padding-block: 0 var(--inner_gap);
+            padding-inline: var(--inner_gap);
+        }
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination
+    {
+        a,
+        .sep
+        {
+            width: 55px;
+            height: 55px;
+
+
+            &.prev,
+            &.next
+            {
+                padding-inline: var(--inner_gap);
+
+
+                .mob_hide
+                {
+                    display: none;
+                }
+            }
+
+
+            &.prev
+            {
+                margin-right: 0;
+            }
+
+
+            &.next
+            {
+                margin-left: 0;
+            }
+        }
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form
+    {
+        .type
+        {
+            .grid_row
+            {
+                --items_per_line: 4;
+            }
+        }
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        * + h2
+        {
+            margin-top: 60px;
+        }
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section
+    {
+        .title,
+        .sub_title,
+        .short_advantages
+        {
+            width: 100%;
+        }
+
+
+        .bg
+        {
+            display: none;
+        }
+    }
+
+
+
+    /*------------------
+        Main service
+    ------------------*/
+    .main_service
+    {
+        .data
+        {
+            width: 100%;
+
+
+            .desc
+            {
+                width: 100%;
+                margin-top: var(--inner_gap);
+            }
+
+
+            .exp
+            {
+                width: 100%;
+            }
+        }
+
+
+        .included
+        {
+            width: 100%;
+
+            gap: var(--inner_gap);
+
+
+            ol
+            {
+                li + li
+                {
+                    margin-top: var(--inner_gap);
+                    padding-top: var(--inner_gap);
+                }
+            }
+        }
+
+
+        .image
+        {
+            position: relative;
+            bottom: 0;
+            left: 0;
+
+            margin-top: -20px;
+            margin-bottom: -60px;
+
+            transform: none;
+        }
+    }
+
+
+
+    /*-------------
+        Objects
+    -------------*/
+    .objects
+    {
+        .head
+        {
+            margin-bottom: var(--block_padding_l);
+
+
+            .block_head
+            {
+                gap: var(--inner_gap_s);
+
+
+                .title
+                {
+                    width: 100%;
+
+                    text-align: center;
+
+
+                    br
+                    {
+                        display: none;
+                    }
+                }
+
+
+                .desc
+                {
+                    width: 100%;
+
+                    text-align: center;
+
+
+                    &:before
+                    {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
+        .swiper.main
+        {
+            .swiper-slide
+            {
+                width: 692px;
+            }
+        }
+
+
+        .object
+        {
+            gap: var(--inner_gap);
+
+
+            .images
+            {
+                width: 260px;
+            }
+
+
+            .info
+            {
+                width: calc(100% - 260px - var(--inner_gap));
+                padding-top: 0;
+
+
+                .features
+                {
+                    row-gap: var(--inner_gap);
+
+
+                    .val
+                    {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps
+    {
+        .step
+        {
+            .number
+            {
+                width: 32px;
+                min-width: 32px;
+                margin-right: var(--inner_gap_l);
+
+                font-size: 28px;
+            }
+
+
+            .name
+            {
+                font-size: 28px;
+            }
+
+
+            .desc
+            {
+                width: 284px;
+                min-width: 284px;
+            }
+        }
+
+
+        .step + .step
+        {
+            margin-top: var(--block_padding);
+            padding-top: var(--block_padding);
+        }
+    }
+
+
+
+    /*-------------
+        Clients
+    -------------*/
+    .clients
+    {
+        .block_head
+        {
+            justify-content: center;
+
+            width: 100%;
+        }
+
+
+        .count
+        {
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 0;
+            padding-block: var(--inner_gap_xxs);
+            padding-inline: 24px;
+        }
+
+
+        .logos
+        {
+            .swiper
+            {
+                .swiper-slide
+                {
+                    width: 240px;
+                }
+            }
+
+
+            .logo
+            {
+                height: 120px;
+            }
+        }
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .FAQ
+    {
+        .block_head
+        {
+            flex-direction: column;
+            justify-content: flex-start;
+
+            text-align: center;
+        }
+
+
+        .accordion_item
+        {
+            .text_block
+            {
+                width: 100%;
+            }
+
+
+            .image
+            {
+                width: 100%;
+                margin-top: var(--inner_gap);
+            }
+        }
+    }
+
+
+
+    /*----------
+        Calc
+    ----------*/
+    .calc
+    {
+        .data
+        {
+            width: 100%;
+            padding-top: 0;
+
+
+            .clicks
+            {
+                top: 0;
+                left: 272px;
+
+                font-size: 18px;
+            }
+
+
+            .text
+            {
+                margin-top: var(--inner_gap);
+            }
+        }
+
+
+        .form
+        {
+            width: 100%;
+            margin-top: var(--block_padding);
+        }
+    }
+
+
+
+    /*---------------
+        Info page
+    ---------------*/
+    .info_page
+    {
+        .text_block
+        {
+            width: 400px;
+        }
+    }
 
 
 
     /*------------
-        Header
+        Stocks
     ------------*/
-    header
+    .stocks
     {
-        position: fixed;
-        z-index: 101;
-        top: 0;
-        right: 100%;
-        left: auto;
-
-        width: 325px;
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        margin: 0;
-        padding: 0;
-
-        transition: transform .3s linear;
-
-        background: var(--bg);
-    }
+        .stock
+        {
+            .thumb
+            {
+                width: 320px;
+            }
 
 
-    header.show
-    {
-        transform: translateX(100%);
-    }
+            .info
+            {
+                width: calc(100% - 320px - var(--block_padding));
 
 
-    header .scroll
-    {
-        display: flex;
-        overflow: auto;
-        flex-direction: column;
+                .name
+                {
+                    width: 100%;
 
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        padding-block: var(--cont_padding);
+                    font-size: 25px;
+                }
 
-        overscroll-behavior-y: contain;
+
+                .desc
+                {
+                    width: 100%;
+
+                    line-height: calc(100% + 8px);
+                }
+
+
+                .link
+                {
+                    margin-top: 0;
+                }
+            }
+        }
     }
 
 
 
-    /*-----------------
-        Mob. header
-    -----------------*/
-    .mob_header
+    /*--------------
+        Articles
+    --------------*/
+    .articles
     {
-        display: block;
+        .grid_row
+        {
+            --items_per_line: 2;
+            --gap_x: var(--inner_gap);
+            --gap_y: var(--inner_gap);
+        }
+    }
+
+
+
+    /*--------------------
+        Contacts block
+    --------------------*/
+    .contacts_block
+    {
+        .data
+        {
+            width: 548px;
+        }
+
+
+        .image
+        {
+            top: 40px;
+
+            width: 600px;
+            margin-right: calc(var(--content_width) / -2 - -100px);
+        }
+    }
+
+
+
+    /*------------------
+        Article page
+    ------------------*/
+    .article_page
+    {
+        .head
+        {
+            .info
+            {
+                width: 100%;
+
+
+                .date
+                {
+                    margin-top: 0;
+                }
+            }
+
+
+            .image
+            {
+                width: 100%;
+                height: 410px;
+                margin-top: var(--block_padding);
+            }
+        }
+
+
+        .data
+        {
+            .text_block
+            {
+                font-size: calc(var(--font_size) - 1px);
+                line-height: 2;
+            }
+        }
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services
+    {
+        .service
+        {
+            .data
+            {
+                .desc,
+                .images
+                {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases
+    {
+        .case
+        {
+            padding-inline: var(--inner_gap_l);
+
+            gap: var(--inner_gap_l);
+
+
+            .images
+            {
+                width: 100%;
+
+
+                .thumbs
+                {
+                    display: none;
+                }
+            }
+
+
+            .info
+            {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info
+    {
+        .data
+        {
+            width: 100%;
+        }
+
+
+        .slider
+        {
+            margin-inline: auto;
+            margin-top: var(--block_padding);
+        }
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages
+    {
+        .grid_row
+        {
+            --items_per_line: 2;
+        }
+    }
+
+
+
+    /*----------
+        Team
+    ----------*/
+    .team
+    {
+        .block_head
+        {
+            gap: 40px;
+
+
+            .desc
+            {
+                width: 328px;
+
+                line-height: calc(100% + 6px);
+            }
+        }
+    }
+
+
+
+    /*------------
+        Prices
+    ------------*/
+    .prices
+    {
+        margin-bottom: var(--outside_gap);
+
+
+        .data
+        {
+            width: 100%;
+
+
+            .desc
+            {
+                width: 100%;
+            }
+        }
+
+
+        .quiz
+        {
+            width: 100%;
+            min-height: 0;
+            margin-top: var(--block_padding_l);
+        }
     }
 }

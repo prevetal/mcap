@@ -5,6 +5,995 @@
     -------------------*/
     :root
     {
-        --cont_padding: 20px;
+        --font_size_title: 45px;
+        --font_size_title_s: 40px;
+        --font_size_title_xs: 35px;
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .f-button.is-close-button
+    {
+        top: 10px;
+        right: 10px;
+    }
+
+
+
+    /*---------------
+        Global bg
+    ---------------*/
+    .global_bg
+    {
+        position: relative;
+        right: 0;
+
+        height: auto;
+        margin-right: 0;
+        margin-bottom: -232px;
+
+        background: var(--bg);
+
+
+        &.mob_offset
+        {
+            margin-top: -148px;
+            margin-bottom: -124px;
+        }
+
+
+        &.bottom
+        {
+            position: absolute;
+
+            min-width: 3260px;
+
+            opacity: .4;
+        }
+
+
+        img
+        {
+            width: 100%;
+            height: auto;
+
+            mix-blend-mode: darken;
+        }
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination
+    {
+        justify-content: space-between;
+
+
+        a,
+        .sep
+        {
+            width: 60px;
+            height: 60px;
+
+
+            &.mob_hide
+            {
+                display: none;
+            }
+
+
+            &.prev,
+            &.next
+            {
+                order: 2;
+
+                width: calc(50% - 5px);
+                margin-top: 10px;
+
+                font-size: calc(var(--font_size) - 1px);
+            }
+        }
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item
+    {
+        .head
+        {
+            .title
+            {
+                font-size: 22px;
+            }
+
+
+            .icon
+            {
+                width: 45px;
+                min-width: 45px;
+
+
+                svg
+                {
+                    width: 15px;
+                }
+            }
+        }
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form
+    {
+        .type
+        {
+            .grid_row
+            {
+                --items_per_line: 2;
+            }
+        }
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+            --gap_x: var(--inner_gap);
+            --gap_y: var(--inner_gap);
+        }
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        &.mob_center
+        {
+            .cont
+            {
+                align-content: center;
+                align-items: center;
+
+                text-align: center;
+            }
+
+
+            .row
+            {
+                justify-content: center;
+            }
+        }
+
+
+        .page_desc
+        {
+            width: 100%;
+        }
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section
+    {
+        .short_advantages
+        {
+            .grid_row
+            {
+                --items_per_line: 2;
+            }
+        }
+
+
+        .action
+        {
+            .btn
+            {
+                width: 100%;
+            }
+
+
+            .exp
+            {
+                justify-content: center;
+
+                width: 100%;
+
+                text-align: center;
+            }
+        }
+    }
+
+
+
+    /*------------------
+        Main service
+    ------------------*/
+    .main_service
+    {
+        .image
+        {
+            width: 720px;
+            min-width: 720px;
+            margin-inline: calc((720px - 100vw) / -2);
+        }
+    }
+
+
+
+    /*-------------
+        Objects
+    -------------*/
+    .objects
+    {
+        .swiper.main
+        {
+            .swiper-slide
+            {
+                width: 324px;
+            }
+        }
+
+
+        .object
+        {
+            padding: var(--inner_gap);
+
+
+            .images,
+            .info
+            {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps
+    {
+        padding-bottom: 0;
+
+
+        .step
+        {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            gap: var(--inner_gap_s);
+
+
+            .number
+            {
+                width: 24px;
+                min-width: 24px;
+                margin-right: 0;
+
+                font-size: 24px;
+            }
+
+
+            .name
+            {
+                width: auto;
+                max-width: calc(100% - 24px - var(--inner_gap_s));
+
+                font-size: 24px;
+            }
+
+
+            .desc
+            {
+                width: 100%;
+                min-width: 100%;
+
+                text-align: center;
+            }
+        }
+    }
+
+
+
+    /*-------------
+        Clients
+    -------------*/
+    .clients
+    {
+        .data
+        {
+            padding-block: var(--block_padding_l);
+        }
+
+
+        .block_head
+        {
+            gap: var(--inner_gap_s);
+
+
+            .desc
+            {
+                width: 100%;
+                padding-block: var(--inner_gap_xxs);
+
+                text-align: center;
+
+                border-radius: var(--border_radius);
+
+
+                &:before
+                {
+                    display: none;
+                }
+            }
+        }
+
+
+
+        .reviews
+        {
+            .swiper
+            {
+                .swiper-slide
+                {
+                    width: 320px;
+                }
+            }
+        }
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .FAQ
+    {
+        .data.main
+        {
+            padding-block: var(--block_padding_l);
+        }
+
+
+        .accordion_item
+        {
+            .text_block
+            {
+                font-size: var(--font_size_s);
+                line-height: calc(100% + 10px);
+            }
+        }
+    }
+
+
+
+    /*---------------
+        Info page
+    ---------------*/
+    .info_page
+    {
+        margin-bottom: -60px;
+
+
+        .text_block
+        {
+            width: 100%;
+        }
+    }
+
+
+
+    /*------------
+        Stocks
+    ------------*/
+    .stocks
+    {
+        .stock
+        {
+            gap: var(--inner_gap);
+
+
+            .thumb
+            {
+                width: 100%;
+            }
+
+
+            .info
+            {
+                width: 100%;
+
+
+                .link
+                {
+                    a
+                    {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+    }
+
+
+
+    /*--------------------
+        Contacts block
+    --------------------*/
+    .contacts_block
+    {
+        .data
+        {
+            width: 100%;
+
+
+            .grid_row
+            {
+                --items_per_line: 1;
+                --gap_y: calc(var(--inner_gap) * 2);
+
+
+                &:before
+                {
+                    display: none;
+                }
+            }
+
+
+            .item
+            {
+                &:after
+                {
+                    bottom: calc(var(--inner_gap) * -1);
+                }
+            }
+
+
+            .val
+            {
+                font-size: var(--font_size);
+            }
+        }
+
+
+        .requisites
+        {
+            width: 244px;
+            max-width: 100%;
+            margin-inline: auto;
+
+            text-align: center;
+
+
+            br
+            {
+                display: block;
+            }
+        }
+
+
+        .image
+        {
+            position: relative;
+            top: 0;
+            right: 0;
+
+            width: 100%;
+            margin-top: var(--block_padding_l);
+            margin-right: 0;
+        }
+
+
+        .bg
+        {
+            top: auto;
+            bottom: 0;
+
+
+            &.global
+            {
+                position: absolute;
+            }
+        }
+    }
+
+
+
+    /*---------------
+        Seo block
+    ---------------*/
+    .seo_block
+    {
+        padding-bottom: 0;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews
+    {
+        .swiper
+        {
+            &:not(.swiper-initialized)
+            {
+                .swiper-slide
+                {
+                    width: 300px;
+                }
+            }
+
+
+            .swiper-slide
+            {
+                width: 300px;
+            }
+        }
+
+
+        .review
+        {
+            padding: 10px;
+
+            border-radius: var(--border_radius_l);
+
+            gap: var(--inner_gap);
+
+
+            .text
+            {
+                padding: var(--inner_gap_s);
+
+                font-size: calc(var(--font_size_s) - 1px);
+                line-height: calc(100% + 7px);
+
+
+                & > *
+                {
+                    margin-bottom: var(--inner_gap_s);
+                }
+            }
+
+
+            .info
+            {
+                padding-inline: var(--inner_gap_s);
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services
+    {
+        .list
+        {
+            margin: calc(var(--cont_padding) / -2);
+
+            gap: var(--inner_gap);
+        }
+
+
+        .service
+        {
+            border-radius: 25px;
+
+
+            .head
+            {
+                .info,
+                .spoler_btn
+                {
+                    width: 100%;
+                }
+            }
+
+
+            .data
+            {
+                margin-block: 0 10px;
+                margin-inline: 10px;
+                padding: var(--inner_gap);
+
+
+                .images
+                {
+                    .image
+                    {
+                        img
+                        {
+                            height: 350px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases
+    {
+        .case
+        {
+            padding-inline: var(--inner_gap);
+
+            gap: var(--inner_gap);
+
+
+            .images
+            {
+                .thumb
+                {
+                    img
+                    {
+                        height: 340px;
+                    }
+                }
+            }
+
+
+            .name
+            {
+                font-size: 25px;
+            }
+
+
+            .desc
+            {
+                font-size: calc(var(--font_size_s) - 1px);
+                line-height: calc(100% + 7px);
+            }
+        }
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+            --gap_x: var(--inner_gap_xs);
+            --gap_y: var(--inner_gap_xs);
+        }
+    }
+
+
+
+    /*----------
+        Team
+    ----------*/
+    .team
+    {
+        .data
+        {
+            padding-block: var(--block_padding_l) var(--block_padding);
+
+            border-radius: var(--border_radius_xl);
+        }
+
+
+        .block_head
+        {
+            flex-direction: column;
+
+            text-align: center;
+
+            gap: var(--inner_gap_s);
+
+
+            .desc
+            {
+                width: 100%;
+
+                font-size: calc(var(--font_size_s) - 1px);
+                line-height: calc(100% + 6px);
+
+
+                &:before
+                {
+                    display: none;
+                }
+            }
+        }
+
+
+        .swiper
+        {
+            .swiper-slide
+            {
+                width: 300px;
+            }
+        }
+
+
+        .person
+        {
+            padding: var(--inner_gap);
+
+            gap: var(--inner_gap);
+
+
+            .photo
+            {
+                height: 275px;
+
+                aspect-ratio: auto;
+            }
+
+
+            .info
+            {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+
+
+
+    /*----------
+        Calc
+    ----------*/
+    .calc
+    {
+        .data
+        {
+            .clicks
+            {
+                top: -10px;
+                left: 204px;
+
+                width: 150px;
+                padding-inline: var(--inner_gap_xs);
+
+                font-size: var(--font_size_s);
+
+                gap: var(--inner_gap_xxs);
+
+
+                .icon
+                {
+                    width: 24px;
+                }
+            }
+
+
+            .advantages
+            {
+                .grid_row
+                {
+                    --items_per_line: 1;
+                    --gap_x: var(--inner_gap_xs);
+                    --gap_y: var(--inner_gap_xs);
+                }
+            }
+        }
+    }
+
+
+
+    /*------------
+        Prices
+    ------------*/
+    .prices
+    {
+        .quiz
+        {
+            .step
+            {
+                .options
+                {
+                    .grid_row
+                    {
+                        --items_per_line: 1;
+                    }
+                }
+
+
+                &.step2
+                {
+                    .area
+                    {
+                        .btn
+                        {
+                            width: var(--form_input_height);
+                        }
+
+
+                        .input
+                        {
+                            width: calc(100% - var(--form_input_height) * 2 - var(--inner_gap) * 2);
+                        }
+                    }
+                }
+
+
+                &.step5
+                {
+                    & label
+                    {
+                        div
+                        {
+                            height: 65px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        .cont
+        {
+            max-width: calc(var(--content_width) + var(--inner_gap));
+            padding-inline: calc(var(--inner_gap) / 2);
+        }
+
+
+        .data
+        {
+            padding-top: var(--block_padding);
+        }
+
+
+        .bottom
+        {
+            margin-top: 35px;
+            padding-block: var(--block_padding);
+        }
+
+
+        .logo
+        {
+            margin-left: 10px;
+        }
+
+
+        .feedback_btn
+        {
+            margin-right: 10px;
+        }
+
+
+        .info
+        {
+            gap: var(--inner_gap);
+        }
+
+
+        .work_time,
+        .location,
+        .email
+        {
+            width: 100%;
+        }
+
+
+        .phone
+        {
+            order: 1;
+
+            margin-top: var(--inner_gap);
+            margin-left: auto;
+        }
+
+
+        .messengers
+        {
+            order: 1;
+
+            margin-top: var(--inner_gap);
+            margin-right: auto;
+            margin-left: var(--inner_gap);
+        }
+
+
+        .download_btn
+        {
+            order: 3;
+
+            margin-inline: auto;
+            margin-top: var(--block_padding);
+        }
+
+
+        .requisites
+        {
+            flex-direction: column;
+
+            width: 100%;
+
+            text-align: center;
+
+            gap: var(--inner_gap_s);
+        }
+
+
+        .links
+        {
+            align-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            width: 100%;
+            margin-top: var(--block_padding);
+            margin-left: 0;
+
+            text-align: center;
+
+            gap: var(--inner_gap_s);
+        }
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        .desc
+        {
+            br
+            {
+                display: none;
+            }
+        }
     }
 }

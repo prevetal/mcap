@@ -1,6 +1,8 @@
 .swiper-button-next,
 .swiper-button-prev
 {
+    transition: .2s linear;
+
     border-radius: var(--border_radius_s);
     background: var(--light_color);
     box-shadow: 0 4px 35px 0 rgba(48, 121, 216, .40);

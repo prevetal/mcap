@@ -31,10 +31,10 @@
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/fonts.css">
 
+		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)">
 		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)">
 		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)">
 		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)">
-		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)">
 	</head>
 
 	<body>
@@ -43,9 +43,9 @@
 				<header>
 					<div class="cont">
 						<div class="data">
-							<div class="logo">
+							<a href="/" class="logo">
 								<img src="images/logo.svg" alt="">
-							</div>
+							</a>
 
 							<div class="work_time">
 								<div class="label">Время работы:</div>
@@ -83,7 +83,7 @@
 								</a>
 							</div>
 
-							<button class="feedback_btn">
+							<button class="feedback_btn modal_btn" data-modal="feedback_modal">
 								<span>Написать нам</span>
 
 								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
@@ -105,8 +105,26 @@
 										<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
 									</a>
 
-									<div class="sub_menu">
-										<div><a href="/"></a></div>
+									<div class="sub">
+										<div><a href="/">Ремонт офисов</a></div>
+
+										<div><a href="/">Ремонт кафе и ресторанов</a></div>
+
+										<div><a href="/">Ремонт магазинов</a></div>
+
+										<div><a href="/">Ремонт аптек</a></div>
+
+										<div><a href="/">Ремонт торговых центров</a></div>
+
+										<div><a href="/">Ремонт банков</a></div>
+
+										<div><a href="/">Ремонт производственных помещений</a></div>
+
+										<div><a href="/">Ремонт гостиниц</a></div>
+
+										<div><a href="/">Ремонт медицинских учреждений</a></div>
+
+										<div><a href="/">Ремонт салонов красоты</a></div>
 									</div>
 								</div>
 
@@ -177,13 +195,180 @@
 
 				<section class="mob_header">
 					<div class="cont">
-						<div class="logo">
+						<a href="/" class="logo">
 							<img src="images/logo.svg" alt="">
+						</a>
+
+						<div class="messengers">
+							<a href="/" target="_blank" rel="noopener nofollow" class="tg_link">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_tg"></use></svg>
+							</a>
+
+							<a href="/" target="_blank" rel="noopener nofollow" class="max_link">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_max"></use></svg>
+							</a>
 						</div>
 
 						<button class="mob_menu_btn">
-							<span></span>
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_menu"></use></svg>
 						</button>
+					</div>
+				</section>
+
+
+				<section class="mob_menu">
+					<div class="data">
+						<button class="close_btn">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+						</button>
+
+						<div class="scroll">
+							<div class="work_time">
+								<div class="label">Время работы:</div>
+
+								<div class="val">ПН-ВС: 09:00-21:00</div>
+							</div>
+
+							<div class="location">
+								<div class="label">Адрес офиса:</div>
+
+								<div class="val">Москва, ул. 2-я Синичкина, д. 9а стр.</div>
+							</div>
+
+							<div class="email">
+								<div class="label">E-mail:</div>
+
+								<div class="val">
+									<a href="mailto:info@m-sar.com">info@m-sar.com</a>
+								</div>
+							</div>
+
+							<div class="contacts">
+								<div class="phone">
+									<div><a href="tel:+7 995 909 85 41">+7 995 909 85 41</a></div>
+
+									<button class="callback_btn">заказать звонок</button>
+								</div>
+
+								<div class="messengers">
+									<a href="/" target="_blank" rel="noopener nofollow" class="tg_link">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_tg"></use></svg>
+									</a>
+
+									<a href="/" target="_blank" rel="noopener nofollow" class="max_link">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_max"></use></svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="btns">
+								<button class="feedback_btn">
+									<span>Написать нам</span>
+
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+								</button>
+
+								<a href="/" class="download_btn" download>
+									<span>Прайс-лист</span>
+
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_download"></use></svg>
+								</a>
+							</div>
+
+							<div class="menu">
+								<div class="item">
+									<a href="/">
+										<span>О нас</span>
+									</a>
+								</div>
+
+								<div class="item">
+									<a href="/" class="sub_link">
+										<span>Услуги</span>
+
+										<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+									</a>
+
+									<div class="sub">
+										<div class="list">
+											<div><a href="/">Ремонт офисов</a></div>
+
+											<div><a href="/">Ремонт кафе и ресторанов</a></div>
+
+											<div><a href="/">Ремонт магазинов</a></div>
+
+											<div><a href="/">Ремонт аптек</a></div>
+
+											<div><a href="/">Ремонт торговых центров</a></div>
+
+											<div><a href="/">Ремонт банков</a></div>
+
+											<div><a href="/">Ремонт производственных помещений</a></div>
+
+											<div><a href="/">Ремонт гостиниц</a></div>
+
+											<div><a href="/">Ремонт медицинских учреждений</a></div>
+
+											<div><a href="/">Ремонт салонов красоты</a></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<a href="/">
+										<span>Цены</span>
+									</a>
+								</div>
+
+								<div class="item">
+									<a href="/">
+										<span>Корпоративным клиентам</span>
+									</a>
+								</div>
+
+								<div class="item">
+									<a href="/">
+										<span>Акции и спец. предложения</span>
+									</a>
+								</div>
+
+								<div class="item">
+									<a href="/">
+										<span>Работы</span>
+									</a>
+								</div>
+
+								<div class="item">
+									<a href="/">
+										<span>Отзывы</span>
+									</a>
+								</div>
+
+								<div class="item">
+									<a href="/">
+										<span>Гарантии</span>
+									</a>
+								</div>
+
+								<div class="item">
+									<a href="/">
+										<span>Оплата</span>
+									</a>
+								</div>
+
+								<div class="item">
+									<a href="/">
+										<span>Блог</span>
+									</a>
+								</div>
+
+								<div class="item">
+									<a href="/">
+										<span>Контакты</span>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 
@@ -443,7 +628,7 @@
 							</div>
 						</div>
 
-						<div class="requisites">Компания ООО «Смартхаус», ОГРН 1167746266490, ИНН 7716819964</div>
+						<div class="requisites">Компания ООО «Смартхаус»,<br> ОГРН 1167746266490,<br> ИНН 7716819964</div>
 					</div>
 
 					<picture class="image">
@@ -464,23 +649,25 @@
 							<img src="images/logo.svg" alt="">
 						</div>
 
-						<div class="work_time">
-							<div class="label">Время работы:</div>
+						<div class="info">
+							<div class="work_time">
+								<div class="label">Время работы:</div>
 
-							<div class="val">ПН-ВС: 09:00-21:00</div>
-						</div>
+								<div class="val">ПН-ВС: 09:00-21:00</div>
+							</div>
 
-						<div class="location">
-							<div class="label">Адрес офиса:</div>
+							<div class="location">
+								<div class="label">Адрес офиса:</div>
 
-							<div class="val">Москва, ул. 2-я Синичкина, д. 9а стр.</div>
-						</div>
+								<div class="val">Москва, ул. 2-я Синичкина, д. 9а стр.</div>
+							</div>
 
-						<div class="email">
-							<div class="label">E-mail:</div>
+							<div class="email">
+								<div class="label">E-mail:</div>
 
-							<div class="val">
-								<a href="mailto:info@m-sar.com">info@m-sar.com</a>
+								<div class="val">
+									<a href="mailto:info@m-sar.com">info@m-sar.com</a>
+								</div>
 							</div>
 						</div>
 
@@ -535,6 +722,60 @@
 
 			<div class="overlay"></div>
 		</div>
+
+
+		<section class="modal" id="feedback_modal">
+			<div class="title text_gradient">Написать нам</div>
+
+			<div class="desc">Оставьте свое сообщение нам, и мы свяжемся<br> с вами в самое ближайшее время</div>
+
+			<form action="" class="form">
+				<div class="line">
+					<div class="field">
+						<textarea name="" placeholder="Ваш вопрос"></textarea>
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<input type="tel" name="" value="" class="input" placeholder="Номер телефона">
+					</div>
+				</div>
+
+				<div class="line agree">
+					<div class="field">
+						<label class="checkbox">
+							<input type="checkbox" name="agree">
+
+							<div class="check">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+							</div>
+
+							<div>Я согласен на <a href="/" target="_blank">обработку персональных данных</a></div>
+						</label>
+					</div>
+				</div>
+
+				<div class="submit">
+					<button type="submit" class="submit_btn">
+						<span>Отправить заявку</span>
+
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+					</button>
+				</div>
+			</form>
+		</section>
+
+
+		<section class="modal success" id="success_modal">
+			<div class="icon">
+				<svg><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+			</div>
+
+			<div class="title text_gradient">Заявка отправлена</div>
+
+			<div class="desc">Мы свяжемся с вами в течение дня</div>
+		</section>
 
 
 		<!-- Connecting javascript files -->
