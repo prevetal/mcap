@@ -136,6 +136,12 @@
     -------------------*/
     .first_section
     {
+        .cont
+        {
+            position: static;
+        }
+
+
         .title,
         .sub_title,
         .short_advantages
@@ -144,10 +150,70 @@
         }
 
 
+        .short_quiz
+        {
+            top: auto;
+            right: 0;
+            bottom: 192px;
+            left: 0;
+
+            margin-inline: auto;
+        }
+
+
         .bg
         {
-            display: none;
+            top: auto;
+            bottom: 0;
+
+
+            &:before
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                display: block;
+
+                width: 100%;
+                height: 246px;
+
+                content: '';
+                z-index: 1;
+                pointer-events: none;
+
+                background: linear-gradient(180deg, #f3f3f3 0%, rgba(243, 243, 243, .83) 34.02%, rgba(243, 243, 243, .00) 100%);
+            }
+
+
+            &:after
+            {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                display: block;
+
+                width: 100%;
+                height: 132px;
+
+                content: '';
+                z-index: 1;
+                pointer-events: none;
+
+                background: linear-gradient(0deg, #f3f3f3 0%, rgba(243, 243, 243, .83) 34.02%, rgba(243, 243, 243, .00) 100%);
+            }
         }
+    }
+
+
+
+    /*----------------------
+        Gallery carousel
+    ----------------------*/
+    .gallery_carousel
+    {
+        margin-top: 380px;
     }
 
 

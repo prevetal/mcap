@@ -426,92 +426,278 @@
 								<span><b>Рассчитаем за 25 минут</b><br> и пришлем в мессенджер смету</span>
 							</div>
 						</div>
+
+						<div class="short_quiz">
+							<div class="head">
+								<div class="icon">
+									<svg><use xlink:href="images/sprite.svg#ic_calc"></use></svg>
+								</div>
+
+								<span>Рассчитайте<br> стоимость сейчас</span>
+
+								<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+							</div>
+
+							<form class="form data" action="/">
+								<div class="step step1" style="display: block;">
+									<div class="question">Где планируется ремонт?</div>
+
+									<div class="options">
+										<div class="modal_cont">
+											<button type="button" class="mini_modal_btn" data-modal-id="#step1_mini_modal">
+												<span>
+													<span class="name">Новостройка</span>
+												</span>
+
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+											</button>
+
+											<div class="mini_modal" id="step1_mini_modal">
+												<div class="scroll">
+													<button type="button" class="btn selected">
+														<span class="name">Новостройка</span>
+													</button>
+
+													<button type="button" class="btn">
+														<span class="name">Офис</span>
+													</button>
+
+													<button type="button" class="btn">
+														<span class="name">Склад</span>
+													</button>
+
+													<button type="button" class="btn">
+														<span class="name">Магазин</span>
+													</button>
+
+													<button type="button" class="btn">
+														<span class="name">Кафе / ресторан</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="step step2">
+									<div class="question">Площадь помещения:</div>
+
+									<div class="area">
+										<div class="field">
+											<button type="button" class="btn minus">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+											</button>
+
+											<input type="text" value="45 м2" class="input" data-minimum="1" data-maximum="9999" data-step="1" data-unit=" м2">
+
+											<button type="button" class="btn plus">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="step step3">
+									<div class="question">Какой ремонт вам нужен?</div>
+
+									<div class="options">
+										<div class="modal_cont">
+											<button type="button" class="mini_modal_btn big" data-modal-id="#step3_mini_modal">
+												<span>
+													<span class="name">Косметический</span>
+
+													<span class="desc">Обновление без перепланировки</span>
+												</span>
+
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+											</button>
+
+											<div class="mini_modal big_pad" id="step3_mini_modal">
+												<div class="scroll">
+													<button type="button" class="btn selected">
+														<span class="name">Косметический</span>
+
+														<span class="desc">Обновление без перепланировки</span>
+													</button>
+
+													<button type="button" class="btn">
+														<span class="name">Косметический</span>
+
+														<span class="desc">С заменой коммуникаций</span>
+													</button>
+
+													<button type="button" class="btn">
+														<span class="name">Под ключ</span>
+
+														<span class="desc">Дизайн + ремонт + комплектация</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="step step4">
+									<div class="question">Какой ремонт вам нужен?</div>
+
+									<div class="options">
+										<div class="modal_cont">
+											<button type="button" class="mini_modal_btn big" data-modal-id="#step4_mini_modal">
+												<span>
+													<span class="name">Новостройка</span>
+
+													<span class="desc">Обновление без перепланировки</span>
+												</span>
+
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+											</button>
+
+											<div class="mini_modal big_pad" id="step4_mini_modal">
+												<div class="scroll">
+													<button type="button" class="btn selected">
+														<span class="name">Новостройка</span>
+
+														<span class="desc">Без отделки</span>
+													</button>
+
+													<button type="button" class="btn">
+														<span class="name">Требуется демонтаж</span>
+													</button>
+
+													<button type="button" class="btn">
+														<span class="name">Уже есть ремонт</span>
+
+														<span class="desc">Нужно обновить</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="step step5">
+									<div class="question">Контактные данные для расчета:</div>
+
+									<div class="line">
+										<div class="field">
+											<input type="text" name="" value="" class="input" placeholder="Ваше имя">
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="field">
+											<input type="text" name="" value="" class="input" placeholder="Телефон / Max / Telegram">
+										</div>
+									</div>
+								</div>
+
+								<button class="next_btn show">
+									<span>Следующий шаг</span>
+
+									<span class="count">
+										<span class="current">1</span> из <span class="total">5</span>
+									</span>
+
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+								</button>
+
+								<button class="send_btn">
+									<span>Получить расчет</span>
+
+									<span class="count">
+										<span class="current">1</span> из <span class="total">5</span>
+									</span>
+
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+								</button>
+							</form>
+						</div>
 					</div>
 
 					<picture class="bg">
 						<img src="images/tmp/bg_first_section.jpg" alt="" fetchpriority="high">
 					</picture>
-				</section>
 
 
-				<section class="gallery_carousel">
-					<div class="cont">
-						<div class="swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb1.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+					<section class="gallery_carousel">
+						<div class="cont">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb1.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb2.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb2.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb3.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb3.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb1.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb1.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb2.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb2.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb3.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb3.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb1.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb1.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb2.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb2.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb3.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb3.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb1.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb1.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb2.jpg" alt="" loading="lazy" class="cover">
-									</picture>
-								</div>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb2.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 
-								<div class="swiper-slide">
-									<picture class="thumb">
-										<img src="images/tmp/gallery_carousel_thumb3.jpg" alt="" loading="lazy" class="cover">
-									</picture>
+									<div class="swiper-slide">
+										<picture class="thumb">
+											<img src="images/tmp/gallery_carousel_thumb3.jpg" alt="" loading="lazy" class="cover">
+										</picture>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</section>
 				</section>
 
 

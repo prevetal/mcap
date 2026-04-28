@@ -47,6 +47,14 @@
     -------------------*/
     .first_section
     {
+        .short_quiz
+        {
+            right: var(--cont_padding);
+
+            margin-right: 0;
+        }
+
+
         .bg
         {
             right: 50%;

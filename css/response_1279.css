@@ -93,6 +93,9 @@
     -------------------*/
     .first_section
     {
+        margin-bottom: var(--outside_gap);
+
+
         .title
         {
             width: 552px;
@@ -114,9 +117,6 @@
     ----------------------*/
     .gallery_carousel
     {
-        margin-bottom: var(--outside_gap);
-
-
         .swiper
         {
             .swiper-slide

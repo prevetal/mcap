@@ -527,16 +527,92 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
+	// Mini pop-up windows
+	$('.mini_modal_btn').click(function(e) {
+		e.preventDefault()
+
+		const modalId = $(this).data('modal-id')
+
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active')
+			$('.mini_modal').removeClass('active')
+
+			if (is_touch_device()) $('body').css('cursor', 'default')
+		} else {
+			$('.mini_modal_btn').removeClass('active')
+			$(this).addClass('active')
+
+			$('.mini_modal').removeClass('active')
+			$(modalId).addClass('active')
+
+			if (is_touch_device()) $('body').css('cursor', 'pointer')
+		}
+	})
+
+
+	$(document).click(e => {
+		if ($(e.target).closest('.modal_cont').length === 0) {
+			$('.mini_modal, .mini_modal_btn').removeClass('active')
+
+			if (is_touch_device()) $('body').css('cursor', 'default')
+		}
+	})
+
+
+	// Short quiz
+	var shortQuizCurrentStep = 1,
+		shortQuizTotalSteps = 5
+
+	$('.short_quiz .head').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+		$(this).next('.data').slideToggle(300)
+	})
+
+	$('.short_quiz .count .total').text(shortQuizTotalSteps)
+
+	$('.short_quiz .step .options .mini_modal .btn').click(function(e) {
+		e.preventDefault()
+
+		const miniModal = $(this).closest('.mini_modal'),
+			modalCont = $(this).closest('.modal_cont'),
+			newText = $(this).html()
+
+		miniModal.find('.btn').removeClass('selected')
+		$(this).addClass('selected')
+
+		modalCont.find('.mini_modal_btn').removeClass('active')
+		miniModal.removeClass('active')
+
+		modalCont.find('.mini_modal_btn span').html(newText)
+	})
+
+	$('.short_quiz .next_btn').click(function(e) {
+		e.preventDefault()
+
+		shortQuizCurrentStep++
+
+		$('.short_quiz .step').hide()
+		$('.short_quiz .step' + shortQuizCurrentStep).fadeIn(300)
+
+		$('.short_quiz .count .current').text(shortQuizCurrentStep)
+
+		if (shortQuizCurrentStep == shortQuizTotalSteps) {
+			$('.short_quiz .next_btn').removeClass('show')
+			$('.short_quiz .send_btn').addClass('show')
+		}
+	})
+
+
 	// Quiz
 	var quizCurrentStep = 1,
 		quizTotalSteps = 7
-
 
 	let progress = 100 / quizTotalSteps * quizCurrentStep
 	$('.quiz .progress div').css('width', progress + '%')
 
 	$('.quiz .count .total').text(quizTotalSteps)
-
 
 	$('.quiz .btns .next_btn').click(function(e) {
 		e.preventDefault()
